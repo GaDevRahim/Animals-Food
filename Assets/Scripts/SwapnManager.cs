@@ -14,21 +14,11 @@ public class SwapnManager : MonoBehaviour
     private float startTime = 2.0f;
     private float timeToRepeating = 2.0f;
 
-    // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("GetRandomAnimal", startTime, timeToRepeating);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            GetRandomAnimal();
-        } */
-    }
     void GetRandomAnimal()
     {
         whichAnimal = Random.Range(0, animalsList.Length);

@@ -10,18 +10,14 @@ public class PlayerController : MonoBehaviour
 
     public GameObject projectileFood;
 
-    // Start is called before the first frame update
     void Start()
     {
         speed = 12.0f;
         max_Xrange = 13.0f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-       
-
         if (transform.position.x < -max_Xrange) transform.position = new Vector3(-max_Xrange, transform.position.y, transform.position.z);
         if (transform.position.x > max_Xrange)  transform.position = new Vector3(max_Xrange, transform.position.y, transform.position.z);
 
@@ -32,6 +28,5 @@ public class PlayerController : MonoBehaviour
         {
             Instantiate(projectileFood, transform.position, projectileFood.transform.rotation);
         }
-
     }
 }
